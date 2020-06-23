@@ -137,4 +137,21 @@ export interface PathApi {
      * - `false` if `path` is a relative path.
      */
     isAbsolute(path: string): boolean;
+
+    /**
+     * `join()` assembles all the given segments into a single string,
+     * using {@link PathApi.sep} as the delimiter, and then normalises
+     * that string.
+     *
+     * Zero-length path segments are ignored.
+     *
+     * If the normalised string is empty, `join()` returns `.` (the
+     * current working directory).
+     *
+     * @param paths
+     * The path segments to be assembled together.
+     * @returns
+     * The assembled path. Guaranteed never to be empty.
+     */
+    join(...paths: string[]): string;
 }

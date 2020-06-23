@@ -30,6 +30,7 @@ The following changes have been completed, and will be included in the next tagg
   - added `.extname()`
   - added `.format()`
   - added `.isAbsolute()`
+  - added `.join()`
   - added `.sep`
 
 ### Fixes
