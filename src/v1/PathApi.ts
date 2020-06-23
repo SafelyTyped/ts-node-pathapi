@@ -88,4 +88,22 @@ export interface PathApi {
      * Everything but the last portion of `path`.
      */
     dirname(path: string): string;
+
+    /**
+     * `extname()` returns the extension of `path`, from the last occurance
+     * of the `.` character in the last segment of the path to the end of
+     * the string.
+     *
+     * If there is no `.` in the last segment of the path, or if the only
+     * `.` character is the first character of the last segment (ie a
+     * UNIX dotfile with no extension), an empty string is returned.
+     *
+     * @param path
+     * The path to strip.
+     * @returns
+     * - the file extension (starting with a `.`) on success
+     * - an empty string otherwise
+     */
+    extname(path: string): string;
+
 }
