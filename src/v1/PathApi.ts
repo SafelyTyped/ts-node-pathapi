@@ -193,4 +193,20 @@ export interface PathApi {
      * The breakdown of `path`.
      */
     parse(path: string): path.ParsedPath;
+
+    /**
+     * `relative()` calculates a relative path between `from` and `to`.
+     *
+     * If `from` and `to` point to the same path (after calling
+     * {@link PathApi.resolve} on them both), and empty string is returned.
+     *
+     * @param from
+     * Where do you want the relative path to go from?
+     * @param to
+     * Where do you want the relative path to go to?
+     * @returns
+     * - An empty string if `from` and `to` point to the same path.
+     * - The relative path otherwise.
+     */
+    relative(from: string, to: string): string;
 }
