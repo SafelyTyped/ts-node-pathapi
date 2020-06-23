@@ -81,7 +81,11 @@ export interface PathApi {
      * ignored, see {@link PathApi.sep}
      *
      * A `TypeError` is thrown by NodeJS if `path` is not a `string`.
+     *
      * @param path
+     * The path to strip.
+     * @returns
+     * Everything but the last portion of `path`.
      */
     dirname(path: string): string;
 }
