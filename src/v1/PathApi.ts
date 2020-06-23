@@ -209,4 +209,29 @@ export interface PathApi {
      * - The relative path otherwise.
      */
     relative(from: string, to: string): string;
+
+    /**
+     * `resolve()` turns the given path segments into an absolute path.
+     *
+     * It works from right-to-left (from the last segment backwards), and
+     * it stops as soon as an absolute path has been constructed.
+     *
+     * Zero-length path segments are ignored.
+     *
+     * If the assembled path is a relative path, it is treated as a relative
+     * path to the current working directory, and converted into an
+     * absolute path.
+     *
+     * The assembled path is normalised before being returned. Trailing
+     * path separators are removed.
+     *
+     * If no path segments are passed in, `resolve()` returns the absolute
+     * path of the current working directory.
+     *
+     * @param paths
+     * The path segments to resolve.
+     * @returns
+     * The assembled, normalised path. Always an absolute path.
+     */
+    resolve(...paths: string[]): string;
 }

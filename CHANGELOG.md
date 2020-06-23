@@ -34,6 +34,7 @@ The following changes have been completed, and will be included in the next tagg
   - added `.normalize()`
   - added `.parse()`
   - added `.relative()`
+  - added `.resolve()`
   - added `.sep`
 
 ### Fixes
