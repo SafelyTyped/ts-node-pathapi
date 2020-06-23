@@ -53,6 +53,14 @@ export interface PathApi {
     delimiter: string;
 
     /**
+     * `sep` provides the platform-specific segment separator:
+     *
+     * - `\` for Windows
+     * - `/` for POSIX
+     */
+    sep: string;
+
+    /**
      * `basename` returns the last portion of a path, similar to the Unix
      * `basename` command. Trailing directory separators are ignored,
      * see {@link sep}.
