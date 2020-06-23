@@ -45,6 +45,14 @@ import path from "path";
  */
 export interface PathApi {
     /**
+     * `delimiter` provides the platform-specific `PATH` delimiter:
+     *
+     * - `;` for Windows
+     * - `:` for POSIX
+     */
+    delimiter: string;
+
+    /**
      * `basename` returns the last portion of a path, similar to the Unix
      * `basename` command. Trailing directory separators are ignored,
      * see {@link sep}.
