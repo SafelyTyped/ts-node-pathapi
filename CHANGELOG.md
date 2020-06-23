@@ -28,6 +28,7 @@ The following changes have been completed, and will be included in the next tagg
   - added `.delimiter`
   - added `.dirname()`
   - added `.extname()`
+  - added `.format()`
   - added `.sep`
 
 ### Fixes

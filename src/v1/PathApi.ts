@@ -106,4 +106,20 @@ export interface PathApi {
      */
     extname(path: string): string;
 
+    /**
+     * `format()` returns a path string, built from `pathObject`. It is
+     * the opposite of {@link PathApi.parse}.
+     *
+     * Some quirks to know about:
+     *
+     * - `pathObject.root` is ignored if `pathObject.dir` is provided.
+     * - `pathObject.name` and `pathObject.ext` is ignored if
+     *   `pathObject.base` is provided.
+     *
+     * @param pathObject
+     * The bits to assemble into a path.
+     * @returns
+     * The assembled path.
+     */
+    format(pathObject: path.ParsedPath): string;
 }
