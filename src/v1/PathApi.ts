@@ -171,4 +171,26 @@ export interface PathApi {
      * The (possibly) modified path. Guaranteed never to be empty.
      */
     normalize(path: string): string;
+
+    /**
+     * `parse()` breaks down the given `path` into separate parts. Trailing
+     * directory separators are ignored.
+     *
+     * The returned object can include any / all of:
+     *
+     * - `root`: the root of the filesystem, if the path is absolute
+     * - `dir`: all the root and folder segments of the path
+     * - `base`: the filename segment of the path
+     * - `name`: the filename segment of the path, minus the extension
+     * - `ext`: the extension segment of the path, starting with a `.`
+     *
+     * All of these are strings. Use {@link PathApi.format} to convert
+     * this back into a single path string.
+     *
+     * @param path
+     * The path to be parsed.
+     * @returns
+     * The breakdown of `path`.
+     */
+    parse(path: string): path.ParsedPath;
 }
