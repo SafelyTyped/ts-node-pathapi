@@ -31,6 +31,7 @@ The following changes have been completed, and will be included in the next tagg
   - added `.format()`
   - added `.isAbsolute()`
   - added `.join()`
+  - added `.normalize()`
   - added `.sep`
 
 ### Fixes

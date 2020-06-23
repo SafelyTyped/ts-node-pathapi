@@ -154,4 +154,21 @@ export interface PathApi {
      * The assembled path. Guaranteed never to be empty.
      */
     join(...paths: string[]): string;
+
+    /**
+     * `normalize()` normalises the given `path`, by resolving `..` and `.`
+     * segments, and condensing multiple {@link PathApi.sep} separators
+     * into a single separator.
+     *
+     * Trailing path separators are preserved.
+     *
+     * If the normalised string is empty, we return `.` (the current
+     * working directory).
+     *
+     * @param path
+     * The path to normalise.
+     * @returns
+     * The (possibly) modified path. Guaranteed never to be empty.
+     */
+    normalize(path: string): string;
 }
