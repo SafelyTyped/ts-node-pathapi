@@ -122,4 +122,19 @@ export interface PathApi {
      * The assembled path.
      */
     format(pathObject: path.ParsedPath): string;
+
+    /**
+     * `isAbsolute()` determines if `path` is an absolute path or not.
+     *
+     * An absolute path is a path that starts with a filesystem root
+     * segment. Absolute paths are the opposite of relative paths: they
+     * don't rely on the current working directory.
+     *
+     * @param path
+     * The path to test.
+     * @returns
+     * - `true` if `path` is an absolute path.
+     * - `false` if `path` is a relative path.
+     */
+    isAbsolute(path: string): boolean;
 }

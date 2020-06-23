@@ -29,6 +29,7 @@ The following changes have been completed, and will be included in the next tagg
   - added `.dirname()`
   - added `.extname()`
   - added `.format()`
+  - added `.isAbsolute()`
   - added `.sep`
 
 ### Fixes
