@@ -1,6 +1,6 @@
 {
   "name": "@safelytyped/node-pathapi",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "The cross-platform bits of NodeJS's path module, as a protocol, for TypeScript.",
   "repository": "github:SafelyTyped/ts-node-pathapi",
   "main": "lib/v1/index.js",
