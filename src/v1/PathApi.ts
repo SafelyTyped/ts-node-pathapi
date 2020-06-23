@@ -234,4 +234,20 @@ export interface PathApi {
      * The assembled, normalised path. Always an absolute path.
      */
     resolve(...paths: string[]): string;
+
+    /**
+     * `toNamespacedPath()` behaves differently on Windows and on POSIX.
+     *
+     * On Windows, it converts `path` to the equivalent namespace-prefixed
+     * path: https://docs.microsoft.com/en-us/windows/desktop/FileIO/naming-a-file#namespaces.
+     *
+     * On POSIX, `path` is returned unmodified.
+     *
+     * @param path
+     * The path to namespace.
+     * @returns
+     * - on Windows, the namespaced path.
+     * - on POSIX, the unmodified path.
+     */
+    toNamespacedPath(path: string): string;
 }

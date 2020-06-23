@@ -35,6 +35,7 @@ The following changes have been completed, and will be included in the next tagg
   - added `.parse()`
   - added `.relative()`
   - added `.resolve()`
+  - added `.toNamespacedPath()`
   - added `.sep`
 
 ### Fixes
