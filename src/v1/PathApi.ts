@@ -63,7 +63,7 @@ export interface PathApi {
     /**
      * `basename` returns the last portion of a path, similar to the Unix
      * `basename` command. Trailing directory separators are ignored,
-     * see {@link sep}.
+     * see {@link PathApi.sep}.
      *
      * @param path
      * The path to strip.
@@ -74,4 +74,14 @@ export interface PathApi {
      * stripped too.
      */
     basename(path: string, ext?: string): string;
+
+    /**
+     * `dirname()` returns the directory name of `path`, similiar to
+     * the UNIX `dirname` command. Trailing directory separators are
+     * ignored, see {@link PathApi.sep}
+     *
+     * A `TypeError` is thrown by NodeJS if `path` is not a `string`.
+     * @param path
+     */
+    dirname(path: string): string;
 }

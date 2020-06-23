@@ -26,6 +26,7 @@ The following changes have been completed, and will be included in the next tagg
 * PathApi
   - added `.basename()`
   - added `.delimiter`
+  - added `.dirname()`
   - added `.sep`
 
 ### Fixes
