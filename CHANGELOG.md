@@ -21,6 +21,14 @@ For each release, changes are grouped under these headings:
 
 The following changes have been completed, and will be included in the next tagged release.
 
+### Dependencies
+
+* Bumped all dependencies to their latest version
+
+## v1.0.0
+
+Released Tuesday, 23rd June 2020.
+
 ### New
 
 * PathApi
