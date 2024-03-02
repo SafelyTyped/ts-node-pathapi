@@ -21,6 +21,10 @@ For each release, changes are grouped under these headings:
 
 The following changes have been completed, and will be included in the next tagged release.
 
+### Fixes
+
+* Added missing package.json entries for JS entry points (doh!)
+
 ## v1.1.0
 
 Released Saturday, 2nd March 2024.
