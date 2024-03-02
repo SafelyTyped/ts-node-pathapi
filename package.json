@@ -1,10 +1,11 @@
 {
   "name": "@safelytyped/node-pathapi",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "The cross-platform bits of NodeJS's path module, as a protocol, for TypeScript.",
   "repository": "github:SafelyTyped/ts-node-pathapi",
-  "main": "lib/v1/index.js",
-  "types": "lib/v1/index.d.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/types/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc -b ./tsconfig-cjs.json ./tsconfig-esm.json ./tsconfig-types.json",
     "lint": "npx eslint .",
